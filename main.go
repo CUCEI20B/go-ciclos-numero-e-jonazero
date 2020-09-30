@@ -1,12 +1,14 @@
 package main
 import "fmt"
 func main(){
-	var limite int
-	var e float64 = 1
+	var e float64 = 0
 	var aux float64 = 1
-	fmt.Scan(&limite)
-	for i:=1; i<limite; i++{
+	var x int
+	fmt.Scan(&x)
+	for i:=0; i<x; i++{
+		if i !=0{
 		aux = aux/float64(i)
+		}
 		e = e + aux
 	}
 	fmt.Println(e)
