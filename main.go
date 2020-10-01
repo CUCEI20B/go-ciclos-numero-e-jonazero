@@ -1,15 +1,16 @@
 package main
 import "fmt"
 func main(){
-	var e float64 = 0
-	var aux float64 = 1
-	var x int
+	var factVal uint64 = 1
+	var x int 
+	var e float64 = 1
 	fmt.Scan(&x)
-	for i:=0; i<x; i++{
-		if i !=0{
-		aux = aux/float64(i)
+	for i:=1; i<=x; i++{
+		factVal = 1
+		for j:=i; j>=1; j-- {
+			factVal *= uint64(j)
 		}
-		e = e + aux
-	}
-	fmt.Println(e)
+		e += 1/float64(factVal)
+		fmt.Println(e)
+	}	
 }
